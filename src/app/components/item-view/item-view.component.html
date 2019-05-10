@@ -1,0 +1,15 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div class="d-flex flex-row">
+      <span class="mr-auto p-2">Completo</span>
+      <mat-icon class="p-2" *ngIf="item && item.complete">check_circle
+      </mat-icon>
+      <mat-icon class="p-2" *ngIf="!item || !item.complete">cancel</mat-icon>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ item?.title }}
+    </p>
+  </mat-card-content>
+</mat-card>

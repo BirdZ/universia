@@ -1,0 +1,12 @@
+
+<div class="d-flex flex-row example-button-row">
+  <mat-form-field class="mr-auto p-2">
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+</div>
+
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let item of itemsFiltereds">
+    <a [routerLink]="['item', item.id]">{{item.title}}</a>
+  </mat-list-item>
+</mat-list>
